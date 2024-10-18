@@ -16,50 +16,89 @@
             height: 100%;
         }
         .background-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+}
+
         .content-container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            min-width: 300px;
             width: 90%;
             max-width: 600px;
         }
         h1 {
             color: #333;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
         .search-container {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         #city-input {
-            padding: 0.75rem;
-            font-size: 1.1rem;
-            margin-right: 0.5rem;
-            width: 60%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
             max-width: 300px;
+            box-sizing: border-box;
         }
         #search-btn {
-            padding: 0.75rem 1.5rem;
-            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
             border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
         }
         .weather-info {
-            margin-top: 1.5rem;
-            font-size: 1.2rem;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .content-container {
+                padding: 3rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .search-container {
+                margin-bottom: 1.5rem;
+            }
+            #city-input {
+                padding: 0.75rem;
+                font-size: 1.1rem;
+                margin-right: 0.5rem;
+                margin-bottom: 0;
+                width: 60%;
+                display: inline-block;
+            }
+            #search-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 1.1rem;
+                width: auto;
+                display: inline-block;
+            }
+            .weather-info {
+                margin-top: 1.5rem;
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
