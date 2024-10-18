@@ -4,23 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud-Powered Weather Forecast App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 300px;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .search-container {
+            margin-bottom: 1.5rem;
+        }
+        #city-input {
+            padding: 0.75rem;
+            font-size: 1.1rem;
+            margin-right: 0.5rem;
+            width: 60%;
+            max-width: 300px;
+        }
+        #search-btn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .weather-info {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Weather Forecast</h1>
-        <div class="search-container">
-            <input type="text" id="city-input" placeholder="Enter city name">
-            <button id="search-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
-        </div>
-        <div id="weather-info" class="weather-info">
-            <!-- Weather information will be displayed here -->
+    <div class="background-container">
+        <img src="./weather.jpg" alt="Weather Background" class="background-image">
+        <div class="content-container">
+            <h1>Weather Forecast</h1>
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="weather-info" class="weather-info">
+                <!-- Weather information will be displayed here -->
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
